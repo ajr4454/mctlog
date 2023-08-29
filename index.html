@@ -64,66 +64,315 @@
       font-size: 12px;
     }
     .photo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative; /* Set the container as a positioning context */
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative; /* Set the container as a positioning context */
+}
 
-  /* Style for each photo */
-  .photo{
-    width: 892px;
-    height: 932px;
-    opacity: 0.5; /* Adjust the opacity as needed */
-    margin-bottom: 20px;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for zoom and opacity effect */
-    position: relative; /* Set photo as a positioning context */
+/* Style for each photo */
+.photo {
+  width: 892px;
+  height: 932px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for zoom and opacity effect */
+  position: relative; /* Set photo as a positioning context */
+  opacity: 0.8; /* Adjust the opacity as needed */
+}
 
-  }
+.photo1 {
+  width: 950px;
+  height: 950px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+ transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for zoom and opacity effect */
+  position: relative; /* Set photo as a positioning context */
+  opacity: 0.8; /* Adjust the opacity as needed */
+}
 
-  .photo1 {
-    width: 950px;
-    height: 950px;
-    margin-bottom: 20px;
-    opacity: 0.5; /* Adjust the opacity as needed */
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for zoom and opacity effect */
-    position: relative; /* Set photo as a positioning context */
+/* Style for the tagline image */
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  }
+/* Style for the overlay image */
+.overlay-image {
+  max-width: 40%; /* Reduce the size by 10 percent */
+  max-height: 90%;
+  transition: transform 0.3s ease; /* Add transition for the "pop in" effect */
+  z-index: 1; /* Place the overlay image above the photos */
+}
 
-  
-  /* Style for the tagline image */
+.overlay-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: black; /* Text color */
+  text-align: center;
+  padding: 10px;
+  margin-top: 180px;
+  font-size: 20px;
+  z-index: 2; /* Place the text above the overlay image */
+}
 
-  /* Add hover effect to both the photo and tagline */
-  .photo:hover, .photo1:hover {
-    transform: scale(1.05); /* Scale up the image slightly on hover */
-  }
+/* Add hover effect to both the photo and tagline */
+.photo:hover, .photo1:hover {
+  opacity: 1;
+  transform: scale(1.05); /* Scale up the image slightly on hover */
+}
 
-  .overlay-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/* Adjust the overlay image size on hover */
+.photo:hover .overlay-image, .photo1:hover .overlay-image {
+  transform: scale(1); /* Scale up to normal size on hover (1 means 100%) */
+}
 
-  /* Style for the overlay image */
-  .overlay-image {
-    max-width: 90%; /* Reduce the size by 10 percent */
-    max-height: 90%;
-    z-index: 1; /* Place the overlay image above the photos */
-  }
+  .black-rectangle {
+            background-color: #000; /* Black background color */
+            height: 100px; /* Adjust the height as needed */
+            width: 100%; /* Full width */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;
+            margin-top: -20px;
+        }
+
+        /* Styling for the images */
+        .centered-image {
+            width: 200px; /* Adjust the image width as needed */
+            height: 50px; /* Adjust the image height as needed */
+            margin: 0 40px; /* Adjust the margin to create space between images */    
+        }
+
+        /* Existing CSS styles */
+
+.image-description-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  text-align: left;
+  position: relative; /* Add a positioning context */
+}
+
+.image-container {
+  flex: 1;
+  padding: 20px;
+  position: relative; /* Add a positioning context for the image */
+}
+
+.img1 {
+  max-width: 580px;
+  height: 580px;
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  transition: transform 0.3s ease; /* Add transition for pop-out effect */
+}
+
+.img1:hover {
+  transform: scale(1.05); /* Scale up the image slightly on hover */
+  z-index: 0; /* Move the image behind other content */
+}
+
+/* Rest of your existing CSS styles */
+
+
+        .description {
+          flex: 0.5;
+          padding: 20px;
+          margin-right: 230px;
+          max-width: 60%; /* Set the maximum width to match the image */
+          margin-left: -350px;
+        }
+
+        h2 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+          margin: 0; /* Remove default margin for paragraphs */
+        }
+
+        .highlight {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.description-line {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+.image-container1 {
+          flex: 0.5;
+          margin-left:350px;
+          width: 1850;          
+        }
+
+        /* Existing CSS styles */
+
+/* Add styles for the red button */
+.red-button {
+  background-color: red;
+  color: white;
+  margin-top: 30px;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add hover transition */
+}
+
+.red-button:hover {
+  background-color: #6b6262; /* Change color on hover */
+}
+.full-screen-image-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.full-screen-image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%; /* Adjust as needed */
+}
+
+.description-text {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.description-container p {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.action-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add hover transition */
+}
+
+.action-button:hover {
+  background-color: #6b6262; /* Change color on hover */
+}
+
+
+.black-rectangle-section {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px; /* Adjust the padding as needed */
+  color: white;
+}
+
+.image-description {
+  text-align: center;
+  flex: 1;
+  max-width: 23%; /* Adjust as needed to control the spacing */
+}
+
+.image-description img {
+  width: 100%;
+  max-width: 10%;
+  height: auto;
+  text-align: center;
+  border-radius: 80%; /* Make images circular if needed */
+}
+
+.image-description h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.image-description p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.video-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0; /* Add margin above and below (adjust as needed) */
+
+        }
+
+        .product-container {
+            display: flex;
+            overflow-x: auto; /* Enable horizontal scrolling */
+        }
+
+        /* Style for each product */
+        .product {
+            flex: 0 0 calc(10% - 30px); /* Set 10% width with increased spacing */
+            margin: 70px; /* Adjust spacing as needed */
+            text-align: center;
+            white-space: nowrap; /* Prevent product wrapping to the next line */
+        }
+
+        /* Style for product images */
+        .product img {
+            max-width: 100%;
+            margin-right: ;
+            height: auto;
+        }
+
+        /* Style for product descriptions */
+        .product-description {
+            margin-top: 10px;
+            font-size: 16px;
+            color: red;
+        }
+
+        /* Style for product prices */
+        .product-price {
+            margin-top: 5px;
+            font-weight: bold;
+            color: #333;
+        }
 
   </style>
   
-  <header class="text-gray-600 body-font">
+  <header class="text-gray-600 body-font" style="position: fixed; top: 0; left: 0; right: 0; background-color: white; z-index: 100;">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" style="margin-left: 0;">
       <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <img src="Boosted logo.jpg" alt="Boosted USA">
@@ -139,7 +388,7 @@
         <div class="dropdown">
           <input type="checkbox" id="more-options-toggle" class="hidden">
           <label for="more-options-toggle" class="mr-5 hover:text-gray-900 cursor-pointer">More Options</label>
-          <ul>
+          <ul style="z-index: 3;">
             <!-- Add your additional options here -->
             <li><a href="#">Option 1</a></li>
             <li><a href="#">Option 2</a></li>
@@ -148,38 +397,26 @@
         </div>
       </div>
     </div>
-  </header>
-  
+</header>
+
+<!-- Add a spacer element to create space at the top of your content so it's not hidden behind the fixed navbar -->
+<div style="height: 100px;"></div>
+
   <div class="photo-grid">
    
-    <div class="photo" style="background-image: url('slide.jpg');">
+    <div class="photo" style="background-image: url('taing.jpg');">
       <!-- Overlay Container 1 -->
       <div class="overlay-container">
         <!-- Overlay Image 1 (place it inside the overlay container) -->
-        <img class="overlay-image" src="Boosted logo.jpg" alt="Overlay Image 1">
+        <img class="overlay-image" src="Boosted-Boards-Scooters-Logo_1600x (1).jpg" alt="Overlay Image 1">
+        <p class="overlay-text">Boosted Revs and Accessories are still in stock</p>
+
       </div>
     </div>
 
+    <div class="photo-grid">
 
-    <div class="photo" style="background-image: url('slide.jpg');">
-      <!-- Overlay Container 1 -->
-      <div class="overlay-container">
-        <!-- Overlay Image 1 (place it inside the overlay container) -->
-        <img class="overlay-image" src="Boosted logo.jpg" alt="Overlay Image 1">
-      </div>
-    </div>
-
-
-    <div class="photo1" style="background-image: url('slide.jpg');">
-      <!-- Overlay Container 1 -->
-      <div class="overlay-container">
-        <!-- Overlay Image 1 (place it inside the overlay container) -->
-        <img class="overlay-image" src="Boosted logo.jpg" alt="Overlay Image 1">
-      </div>
-    </div>
-
-
-    <div class="photo1" style="background-image: url('slide.jpg');">
+    <div class="photo" style="background-image: url('bike.jpg');">
       <!-- Overlay Container 1 -->
       <div class="overlay-container">
         <!-- Overlay Image 1 (place it inside the overlay container) -->
@@ -187,76 +424,399 @@
       </div>
     </div>
   </div>
+
+
+  <div class="photo-grid">
+
+    <div class="photo1" style="background-image: url('slide.jpg');">
+      <!-- Overlay Container 1 -->
+      <div class="overlay-container">
+        <!-- Overlay Image 1 (place it inside the overlay container) -->
+        <img class="overlay-image" src="evolve.jpg" alt="Overlay Image 1">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="photo-grid">
+
+    <div class="photo1" style="background-image: url('all.jpg');">
+      <!-- Overlay Container 1 -->
+      <div class="overlay-container">
+        <!-- Overlay Image 1 (place it inside the overlay container) -->
+        <img class="overlay-image" src="Boosted logo.jpg" alt="Overlay Image 1">
+      </div>
+    </div>
+  </div>
+</div>
+
   
+  <div class="black-rectangle">
+    <!-- Four centered images -->
+    <img src="Boosted logo.jpg" alt="Image 1" class="centered-image">
+    <img src="Boosted logo.jpg" alt="Image 2" class="centered-image">
+    <img src="Boosted logo.jpg" alt="Image 3" class="centered-image">
+    <img src="Boosted logo.jpg" alt="Image 4" class="centered-image">
+</div>
 
-  <section class="text-gray-600 body-font">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-wrap -m-4">
-        <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-          <div class="h-full text-center">
-            <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/302x302">
-            <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HOLDEN CAULFIELD</h2>
-            <p class="text-gray-500">Senior Product Designer</p>
+<div>
+  <section class="image-description-section">
+    <div class="image-container">
+      <img class="img1" src="73.jpg" alt="Image Description">
+    </div>
+    <div class="description">
+      <h2><span class="highlight">Why Super73?</span></h2>
+      <br>
+      <p>Super73 Electric Bikes are the industry standard in style and performance!</p>
+      <br>
+      <p class="description-line">Fun for every rider!</p>
+      <br>
+      <p>
+        With a bike for every rider and any condition, Super73 is the easiest get on and go e-bike out there. With multiple levels of pedal assist and speed levels, these bikes can be customized to changing terrains and specific riders. Don't feel like pedaling? All Super73's have throttles installed. Throw in an easy and intuitive app that allows on-the-fly changes as well as software updates and there isn't anything you can't tackle in style.
+      </p>
+      <button class="red-button">Learn More</button> <!-- Add the button -->
+    </div>
+  </section>
+</div>
+
+<div>
+  <section class="image-description-section">
+    <div class="image-container1">
+      <h2><span class="highlight">Why Minimotors Electric Scooters?</span></h2>
+      <br>
+      <p class="description-line">Build quality is as impressive as the performance.</p>
+      <br>
+      <p>
+        Dualtron Electric Scooters represent the highest quality electric scooters you can find today.  They are the best built, most capable, and have the longest range in the market.  Experience the best electric scooters in the world.  Redefining transport!      </p>  
+      <button class="red-button">Learn More</button> <!-- Add the button -->
+      </div>
+    <div class="description" style="margin-left: 100px;">
+      <img class="img1" src="73.jpg" alt="Image Description">
+    </div>
+  </section>
+</div>
+
+<div>
+  <section class="image-description-section">
+    <div class="image-container">
+      <img class="img1" src="73.jpg" alt="Image Description">
+    </div>
+    <div class="description">
+      <h2><span class="highlight">Why Super73?</span></h2>
+      <br>
+      <p>Super73 Electric Bikes are the industry standard in style and performance!</p>
+      <br>
+      <p class="description-line">Fun for every rider!</p>
+      <br>
+      <p>
+        With a bike for every rider and any condition, Super73 is the easiest get on and go e-bike out there. With multiple levels of pedal assist and speed levels, these bikes can be customized to changing terrains and specific riders. Don't feel like pedaling? All Super73's have throttles installed. Throw in an easy and intuitive app that allows on-the-fly changes as well as software updates and there isn't anything you can't tackle in style.
+      </p>
+      <button class="red-button">Learn More</button>
+    </div>
+  </section>
+</div>
+
+<div class="full-screen-image-section">
+  <img src="main.jpg" alt="Full Screen Image">
+  <div class="description-container" style="margin-top: -230px;">
+    <h2 class="description-text" style="font-weight: bolder">High-performance</h2>
+    <br>
+    <h1 style="font-weight: bolder; font-size: 60px;">Electric Scooters</h1>
+    <br>
+    <p style="width: 700px;">Cruising campus, going to work, or getting through that long list of errands has never been easier or more fun.</p>
+    <br>
+    <button class="action-button">shop now</button>
+  </div>
+</div>
+
+<section>
+  <div class="video-container" >
+      <iframe width="1160" height="653" src="https://www.youtube.com/embed/1eLZBg9Qdbw" title="THIS IS HADEAN | EVOLVE SKATEBOARDS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</section>
+
+<div class="full-screen-image-section">
+  <img src="skate.jpg" alt="Full Screen Image">
+  <div class="description-container" style="margin-top: -30px; color: #fff;">
+    <p class="description-text" style="font-weight: bolder; color: #fff;">
+      All Terrain + Street
+    </p>
+    <br>
+    <h1 style="font-weight: bolder; font-size: 40px; color: #fff; margin-top:-20px;">The Best All Terrain Skateboard!</h1>
+    <br>
+    <p style="width: 700px; color: #fff;margin-top:-20px;">2-IN-1
+    </p>
+    <br>
+    <button class="action-button" style="margin-top: -20px;">shop now</button>
+  </div>
+</div>
+
+ <h1 style="text-align: center; font-size:40px; font-weight: bold ;margin-top: 30px; margin-bottom: 50px;">Looking for Boosted Accessories?</h1>
+
+
+<div class="product-container">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="typre.jpg" alt="Product 1">
+            <div class="product-description">Product 1 Description</div>
+            <div class="product-price">$99.99</div>
+        </div>
+
+        <!-- Repeat the above structure for the other 9 products -->
+        
+        <!-- Product 10 -->
+        <div class="product">
+            <img src="typre.jpg" alt="Product 10">
+            <div class="product-description">Product 10 Description</div>
+            <div class="product-price">$49.99</div>
+        </div>
+            <!-- Product 10 -->
+            <div class="product">
+              <img src="typre.jpg" alt="Product 10">
+              <div class="product-description">Product 10 Description</div>
+              <div class="product-price">$49.99</div>
+          </div>
+              <!-- Product 10 -->
+        <div class="product">
+          <img src="typre.jpg" alt="Product 10">
+          <div class="product-description">Product 10 Description</div>
+          <div class="product-price">$49.99</div>
+      </div>
+          <!-- Product 10 -->
+          <div class="product">
+            <img src="typre.jpg" alt="Product 10">
+            <div class="product-description">Product 10 Description</div>
+            <div class="product-price">$49.99</div>
+        </div>
+            <!-- Product 10 -->
+            <div class="product">
+              <img src="typre.jpg" alt="Product 10">
+              <div class="product-description">Product 10 Description</div>
+              <div class="product-price">$49.99</div>
+          </div>
+              <!-- Product 10 -->
+        <div class="product">
+          <img src="typre.jpg" alt="Product 10">
+          <div class="product-description">Product 10 Description</div>
+          <div class="product-price">$49.99</div>
+      </div>
+          <!-- Product 10 -->
+          <div class="product">
+            <img src="typre.jpg" alt="Product 10">
+            <div class="product-description">Product 10 Description</div>
+            <div class="product-price">$49.99</div>
+        </div>
+            <!-- Product 10 -->
+            <div class="product">
+              <img src="typre.jpg" alt="Product 10">
+              <div class="product-description">Product 10 Description</div>
+              <div class="product-price">$49.99</div>
+          </div>
+              <!-- Product 10 -->
+        <div class="product">
+          <img src="typre.jpg" alt="Product 10">
+          <div class="product-description">Product 10 Description</div>
+          <div class="product-price">$49.99</div>
+      </div>
+      
+    </div>
+
+    <h1 style="text-align: center; font-size:40px; font-weight: bold ;margin-top: 30px; margin-bottom: 50px;">Looking for Boosted Accessories?</h1>
+
+
+<div class="product-container">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="typre.jpg" alt="Product 1">
+            <div class="product-description">Product 1 Description</div>
+            <div class="product-price">$99.99</div>
+        </div>
+
+        <!-- Repeat the above structure for the other 9 products -->
+        
+        <!-- Product 10 -->
+        <div class="product">
+            <img src="typre.jpg" alt="Product 10">
+            <div class="product-description">Product 10 Description</div>
+            <div class="product-price">$49.99</div>
+        </div>
+            <!-- Product 10 -->
+            <div class="product">
+              <img src="typre.jpg" alt="Product 10">
+              <div class="product-description">Product 10 Description</div>
+              <div class="product-price">$49.99</div>
+          </div>
+              <!-- Product 10 -->
+        <div class="product">
+          <img src="typre.jpg" alt="Product 10">
+          <div class="product-description">Product 10 Description</div>
+          <div class="product-price">$49.99</div>
+      </div>
+          <!-- Product 10 -->
+          <div class="product">
+            <img src="typre.jpg" alt="Product 10">
+            <div class="product-description">Product 10 Description</div>
+            <div class="product-price">$49.99</div>
+        </div>
+            <!-- Product 10 -->
+            <div class="product">
+              <img src="typre.jpg" alt="Product 10">
+              <div class="product-description">Product 10 Description</div>
+              <div class="product-price">$49.99</div>
+          </div>
+              <!-- Product 10 -->
+        <div class="product">
+          <img src="typre.jpg" alt="Product 10">
+          <div class="product-description">Product 10 Description</div>
+          <div class="product-price">$49.99</div>
+      </div>
+          <!-- Product 10 -->
+          <div class="product">
+            <img src="typre.jpg" alt="Product 10">
+            <div class="product-description">Product 10 Description</div>
+            <div class="product-price">$49.99</div>
+        </div>
+            <!-- Product 10 -->
+            <div class="product">
+              <img src="typre.jpg" alt="Product 10">
+              <div class="product-description">Product 10 Description</div>
+              <div class="product-price">$49.99</div>
+          </div>
+              <!-- Product 10 -->
+        <div class="product">
+          <img src="typre.jpg" alt="Product 10">
+          <div class="product-description">Product 10 Description</div>
+          <div class="product-price">$49.99</div>
+      </div>
+      
+    </div>
+
+
+    <h1 style="text-align: center; font-size:40px; font-weight: bold ;margin-top: 30px; margin-bottom: 50px;">Looking for Boosted Accessories?</h1>
+
+
+<div class="product-container">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="typre.jpg" alt="Product 1">
+            <div class="product-description">Product 1 Description</div>
+            <div class="product-price">$99.99</div>
+        </div>
+
+        <!-- Repeat the above structure for the other 9 products -->
+        
+        <!-- Product 10 -->
+        <div class="product">
+            <img src="typre.jpg" alt="Product 10">
+            <div class="product-description">Product 10 Description</div>
+            <div class="product-price">$49.99</div>
+        </div>
+            <!-- Product 10 -->
+            <div class="product">
+              <img src="typre.jpg" alt="Product 10">
+              <div class="product-description">Product 10 Description</div>
+              <div class="product-price">$49.99</div>
+          </div>
+              <!-- Product 10 -->
+        <div class="product">
+          <img src="typre.jpg" alt="Product 10">
+          <div class="product-description">Product 10 Description</div>
+          <div class="product-price">$49.99</div>
+      </div>
+          <!-- Product 10 -->
+          <div class="product">
+            <img src="typre.jpg" alt="Product 10">
+            <div class="product-description">Product 10 Description</div>
+            <div class="product-price">$49.99</div>
+        </div>
+            <!-- Product 10 -->
+            <div class="product">
+              <img src="typre.jpg" alt="Product 10">
+              <div class="product-description">Product 10 Description</div>
+              <div class="product-price">$49.99</div>
+          </div>
+              <!-- Product 10 -->
+        <div class="product">
+          <img src="typre.jpg" alt="Product 10">
+          <div class="product-description">Product 10 Description</div>
+          <div class="product-price">$49.99</div>
+      </div>
+          <!-- Product 10 -->
+          <div class="product">
+            <img src="typre.jpg" alt="Product 10">
+            <div class="product-description">Product 10 Description</div>
+            <div class="product-price">$49.99</div>
+        </div>
+            <!-- Product 10 -->
+            <div class="product">
+              <img src="typre.jpg" alt="Product 10">
+              <div class="product-description">Product 10 Description</div>
+              <div class="product-price">$49.99</div>
+          </div>
+              <!-- Product 10 -->
+        <div class="product">
+          <img src="typre.jpg" alt="Product 10">
+          <div class="product-description">Product 10 Description</div>
+          <div class="product-price">$49.99</div>
+      </div>
+      
+    </div>
+
+
+
+
+
+<section class="text-gray-600 body-font relative" style="background-color: #D3D3D3	;">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="text-center">
+      <h1 class="text-3xl font-bold mb-4 text-gray-900" style="font-size:40px ;">Subscribe to our Newsletter</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Sign up to get the latest on sales, new releases and more …</p>
+    </div>
+    <div class="lg:w-1/2 md:w-2/3 mx-auto">
+      <div class="flex flex-wrap -m-2">
+        <div class="p-10 w-100" style="width: 600px; align-items: center;margin-left: 80px;">
+          <div class="relative" style="text-align: left;">
+            <label for="email" class="leading-7 text-sm text-gray-600";">Email</label>
+            <input type="email" id="email" name="email" class="w-full h-12 bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-red-500 focus:bg-white focus:ring-2 focus:ring-red-200 text-sm outline-none text-gray-700 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
-        <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-          <div class="h-full text-center">
-            <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/300x300">
-            <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">ALPER KAMU</h2>
-            <p class="text-gray-500">UI Develeoper</p>
-          </div>
+        <div class="p-0 w-full text-center text-xs text-gray-500" style="width: 500px; margin-left: 130px; margin-top: -25px;">
+          By submitting this form, you are consenting to receive marketing emails from: BoostedUSA, 1281 Andersen Drive, Ste. K, San Rafael, CA, 94901, US, <a href="http://www.boostedusa.com" class="underline">http://www.boostedusa.com</a>. You can revoke your consent to receive emails at any time by using the SafeUnsubscribe® link, found at the bottom of every email. Emails are serviced by Constant Contact.
         </div>
-        <div class="lg:w-1/3 lg:mb-0 p-4">
-          <div class="h-full text-center">
-            <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/305x305">
-            <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HENRY LETHAM</h2>
-            <p class="text-gray-500">CTO</p>
-          </div>
+        <div class="p-10 w-full text-center">
+          <button class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded">Sign Up</button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="text-gray-600 body-font relative">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-col text-center w-full mb-12">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
-      </div>
-      <div class="lg:w-1/2 md:w-2/3 mx-auto">
-        <div class="flex flex-wrap -m-2">
-          <div class="p-2 w-1/2">
-            <div class="relative">
-              <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
-              <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-            </div>
-          </div>
-          <div class="p-2 w-1/2">
-            <div class="relative">
-              <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-              <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-            </div>
-          </div>
-          <div class="p-2 w-full">
-            <div class="relative">
-              <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
-              <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-            </div>
-          </div>
-          <div class="p-2 w-full">
-            <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-          </div>          
-        </div>
-      </div>
+
+
+
+  <div class="black-rectangle-section">
+    <div class="image-description">
+      <img src="bulb.jpeg" alt="Image 1">
+      <h3>Image 1</h3>
+      <p>Description for Image 1</p>
     </div>
-  </section>
-
+    <div class="image-description">
+      <img src="image2.jpg" alt="Image 2">
+      <h3>Image 2</h3>
+      <p>Description for Image 2</p>
+    </div>
+    <div class="image-description">
+      <img src="image3.jpg" alt="Image 3">
+      <h3>Image 3</h3>
+      <p>Description for Image 3</p>
+    </div>
+    <div class="image-description">
+      <img src="image4.jpg" alt="Image 4">
+      <h3>Image 4</h3>
+      <p>Description for Image 4</p>
+    </div>
+  </div>
+  
   <footer class="text-gray-600 body-font">
     <div class="bg-gray-100">
       <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
@@ -288,7 +848,8 @@
             <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3" style="font-weight: bolder; font-family: 'Times New Roman';font-size:larger;">About Boosted USA
             </h2>
             <nav class="list-none mb-10">
-                <p class="footer__heading">About Boosted USA</p> <p>Boosted empowers people everywhere to commute across their cities, campuses, and communities in ways that were never before possible.  Boosted is solving one of the biggest problems people face each day: transportation.</p><p><br/>CaliRides LLC - DBA Boosted USA</p><p>1281 Andersen Drive Ste. K<br/>San Rafael, CA 94901</p><p></p><p></p></div></div></section></nav>
+                <p class="footer__heading">About Boosted USA</p> 
+                <p style="width: 600px;">Boosted empowers people everywhere to commute across their cities, campuses, and communities in ways that were never before possible.  Boosted is solving one of the biggest problems people face each day: transportation.</p><p><br/>CaliRides LLC - DBA Boosted USA</p><p>1281 Andersen Drive Ste. K<br/>San Rafael, CA 94901</p><p></p><p></p></div></div></section></nav>
           </div>
         </div>
       </div>
